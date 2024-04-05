@@ -1,0 +1,167 @@
+version: "3.6"
+
+networks:
+  splunknet:
+    driver: bridge
+    attachable: true
+    ipam:
+      config:
+        - subnet: "172.24.0.0/16"
+
+volumes:
+  sh1:
+  sh2:
+  sh3:
+  dep1:
+  cm1:
+  idx1:
+  idx2:
+  idx3:
+  idx4:
+
+services:
+  sh1:
+    networks:
+      splunknet:
+        aliases:
+          - sh1
+        ipv4_address: "172.24.0.11"
+    image: ${SPLUNK_IMAGE}
+    command: tail -F /dev/null
+    hostname: sh1
+    container_name: sh1
+    ports:
+      - 8001:8000
+      - 8091:8089
+    volumes:
+      - sh1:/opt
+    
+
+  sh2:
+    networks:
+      splunknet:
+        aliases:
+          - sh2
+        ipv4_address: "172.24.0.12"
+    image: ${SPLUNK_IMAGE}
+    command: tail -F /dev/null
+    hostname: sh2
+    container_name: sh2
+    ports:
+      - 8002:8000
+      - 8092:8089
+    volumes:
+      - sh2:/opt
+
+  sh3:
+    networks:
+      splunknet:
+        aliases:
+          - sh3
+        ipv4_address: "172.24.0.13"
+    image: ${SPLUNK_IMAGE}
+    command: tail -F /dev/null
+    hostname: sh3
+    container_name: sh3
+    ports:
+      - 8003:8000
+      - 8093:8089
+    volumes:
+      - sh3:/opt
+
+  dep1:
+    networks:
+      splunknet:
+        aliases:
+          - dep1
+        ipv4_address: "172.24.0.14"
+    image: ${SPLUNK_IMAGE}
+    command: tail -F /dev/null
+    hostname: dep1
+    container_name: dep1
+    ports:
+      - 8004:8000
+      - 8094:8089
+    volumes:
+      - dep1:/opt
+
+  cm1:
+    networks:
+      splunknet:
+        aliases:
+          - cm1
+        ipv4_address: "172.24.0.15"
+    image: ${SPLUNK_IMAGE}
+    command: tail -F /dev/null
+    hostname: cm1
+    container_name: cm1
+    ports:
+      - 8005:8000
+      - 8095:8089
+    volumes:
+      - cm1:/opt
+
+  idx1:
+    networks:
+      splunknet:
+        aliases:
+          - idx1
+        ipv4_address: "172.24.0.16"
+    image: ${SPLUNK_IMAGE}
+    command: tail -F /dev/null
+    hostname: idx1
+    container_name: idx1
+    ports:
+      - 8006:8000
+      - 8096:8089
+    volumes:
+      - idx1:/opt
+
+  idx2:
+    networks:
+      splunknet:
+        aliases:
+          - idx2
+        ipv4_address: "172.24.0.17"
+    image: ${SPLUNK_IMAGE}
+    command: tail -F /dev/null
+    hostname: idx2
+    container_name: idx2
+    ports:
+      - 8007:8000
+      - 8097:8089
+    volumes:
+      - idx2:/opt
+
+  idx3:
+    networks:
+      splunknet:
+        aliases:
+          - idx3
+        ipv4_address: "172.24.0.18"
+    image: ${SPLUNK_IMAGE}
+    command: tail -F /dev/null
+    hostname: idx3
+    container_name: idx3
+    ports:
+      - 8008:8000
+      - 8098:8089
+    volumes:
+      - idx3:/opt
+
+  idx4:
+    networks:
+      splunknet:
+        aliases:
+          - idx4
+        ipv4_address: "172.24.0.19"
+    image: ${SPLUNK_IMAGE}
+    command: tail -F /dev/null
+    hostname: idx4
+    container_name: idx4
+    ports:
+      - 8009:8000
+      - 8099:8089
+    volumes:
+      - idx4:/opt
+
