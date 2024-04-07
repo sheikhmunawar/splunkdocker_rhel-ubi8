@@ -4,9 +4,18 @@
 ### Steps
 * clone the repo
   
-    clone the proxy_traefik branch with traefik as a reverse proxy.
+    clone the main branch
     ```
-    git clone -b proxy_traefik git@github.com:sheikhmunawar/splunkdocker_rhel-ubi8.git
+    git clone git@github.com:sheikhmunawar/splunkdocker_rhel-ubi8.git
+
+    OR use below url if not logged in to git or git keys not setup
+    git clone https://github.com/sheikhmunawar/splunkdocker_rhel-ubi8.git
+
+    switch to proxy branch
+    git checkout -b proxy_traefik
+
+    Run following to make sure you are on proxy_traefik branch
+    git branch
     ```
 * download splunk package in scripts folder
     ```
