@@ -39,4 +39,9 @@ docker volume ls -q | xargs -r docker volume rm
 docker-compose up -d
 docker-compose down
 ```
-
+* Use following URLs to access web interface
+[dep1: dep1.localhost](dep1.localhost)
+[cm1: cm1.localhost](cm1.localhost)
+[sh1: sh1.localhost](sh1.localhost)
+[sh2: sh2.localhost](sh2.localhost)
+[idx1: idx1.localhost](idx1.localhost)
