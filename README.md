@@ -30,7 +30,7 @@ docker build -t img_splunk_base_v2 .
 
 ~~docker exec -it -u root test_baseC2  /bin/bash~~
 
-* Remove previously created volumes before starting the cluster first time.
+* Remove previously created volumes by old script before starting the cluster for the first time.
 ```
 docker volume ls -q | xargs -r docker volume rm
 ```
@@ -40,4 +40,3 @@ docker-compose up -d
 docker-compose down
 ```
 
-docker volume ls -q | xargs -r docker volume rm
