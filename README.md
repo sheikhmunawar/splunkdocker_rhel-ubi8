@@ -24,18 +24,20 @@ wget -O splunk-9.2.0.1-d8ae995bf219-Linux-x86_64.tgz "https://download.splunk.co
 
 *  Make a base image
 ```
-docker build -t img_splunk_base_v1 .
+docker build -t img_splunk_base_v2 .
 ```
-~~docker run -it --name test_baseC1  -d img_splunk_base_v1~~
+~~docker run -it --name test_baseC2  -d img_splunk_base_v2~~
 
-~~docker exec -it -u root test_baseC1  /bin/bash~~
+~~docker exec -it -u root test_baseC2  /bin/bash~~
 
+* Remove previously created volumes before starting the cluster first time.
+```
+docker volume ls -q | xargs -r docker volume rm
+```
 * Start/stop the cluster
 ```
 docker-compose up -d
 docker-compose down
 ```
 
-delete
-rm -rf /opt/splunk/etc/instance.cfg
-sed -i "s/^serverName.*/serverName = $(hostname)/" /opt/splunk/etc/system/local/server.conf
+docker volume ls -q | xargs -r docker volume rm

@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Error><Code>NoSuchBucket</Code><Message>The specified bucket does not exist</Message><BucketName>splunk-bash-install</BucketName><RequestId>H9CB0KA0D44VWY5M</RequestId><HostId>wATNkp1wLKIIWXZSn7Idx2tzAeuJbjp2D02s+MLIZciPDJwZsEdrfCIGTLI6AB5iBwODsiGQ2G8=</HostId></Error>

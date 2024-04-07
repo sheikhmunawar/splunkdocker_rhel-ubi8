@@ -82,3 +82,6 @@ echo "
 # Clean
 microdnf clean all
 rm -rf /install.sh /anaconda-post.log /var/log/anaconda/*
+
+
+

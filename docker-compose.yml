@@ -23,7 +23,12 @@ services:
         aliases:
           - sh1
     image: ${SPLUNK_IMAGE}
-    command: tail -F /dev/null
+    # command: tail -F /dev/null
+    command: 
+      - /bin/sh
+      - -c
+      - |
+        /opt/splunk/bin/splunk start && tail -f /dev/null
     hostname: sh1
     container_name: sh1
     ports:
@@ -45,7 +50,12 @@ services:
         aliases:
           - sh2
     image: ${SPLUNK_IMAGE}
-    command: tail -F /dev/null
+    # command: tail -F /dev/null
+    command: 
+      - /bin/sh
+      - -c
+      - |
+        /opt/splunk/bin/splunk start && tail -f /dev/null
     hostname: sh2
     container_name: sh2
     ports:
@@ -66,7 +76,12 @@ services:
         aliases:
           - sh3
     image: ${SPLUNK_IMAGE}
-    command: tail -F /dev/null
+    # command: tail -F /dev/null
+    command: 
+      - /bin/sh
+      - -c
+      - |
+        /opt/splunk/bin/splunk start && tail -f /dev/null
     hostname: sh3
     container_name: sh3
     ports:
@@ -87,7 +102,12 @@ services:
         aliases:
           - dep1
     image: ${SPLUNK_IMAGE}
-    command: tail -F /dev/null
+    # command: tail -F /dev/null
+    command: 
+      - /bin/sh
+      - -c
+      - |
+        /opt/splunk/bin/splunk start && tail -f /dev/null
     hostname: dep1
     container_name: dep1
     ports:
@@ -106,7 +126,12 @@ services:
         aliases:
           - cm1
     image: ${SPLUNK_IMAGE}
-    command: tail -F /dev/null
+    # command: tail -F /dev/null
+    command: 
+      - /bin/sh
+      - -c
+      - |
+        /opt/splunk/bin/splunk start && tail -f /dev/null
     hostname: cm1
     container_name: cm1
     ports:
@@ -126,7 +151,12 @@ services:
         aliases:
           - idx1
     image: ${SPLUNK_IMAGE}
-    command: tail -F /dev/null
+    # command: tail -F /dev/null
+    command: 
+      - /bin/sh
+      - -c
+      - |
+        /opt/splunk/bin/splunk start && tail -f /dev/null
     hostname: idx1
     container_name: idx1
     ports:
@@ -147,7 +177,12 @@ services:
         aliases:
           - idx2
     image: ${SPLUNK_IMAGE}
-    command: tail -F /dev/null
+    # command: tail -F /dev/null
+    command: 
+      - /bin/sh
+      - -c
+      - |
+        /opt/splunk/bin/splunk start && tail -f /dev/null
     hostname: idx2
     container_name: idx2
     ports:
@@ -168,7 +203,12 @@ services:
         aliases:
           - idx3
     image: ${SPLUNK_IMAGE}
-    command: tail -F /dev/null
+    # command: tail -F /dev/null
+    command: 
+      - /bin/sh
+      - -c
+      - |
+        /opt/splunk/bin/splunk start && tail -f /dev/null
     hostname: idx3
     container_name: idx3
     ports:
