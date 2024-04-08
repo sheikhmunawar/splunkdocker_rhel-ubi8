@@ -12,7 +12,7 @@
     git clone https://github.com/sheikhmunawar/splunkdocker_rhel-ubi8.git
 
     switch to proxy branch
-    git checkout -b proxy_traefik
+    git checkout proxy_traefik
 
     Run following to make sure you are on proxy_traefik branch
     git branch
