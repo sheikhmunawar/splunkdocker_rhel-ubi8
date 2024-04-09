@@ -50,7 +50,32 @@ docker-compose down             # will bring the whole cluster down
 [sh2: sh2.localhost](sh2.localhost)
 [idx1: idx1.localhost](idx1.localhost)
 
+### Cloud deployment
 
+* Edit hosts file
+Windows: c:\Windows\System32\Drivers\etc\hosts.
+Linux: /etc/hosts
+
+Assuming 145.239.19.254 is the public ip
+
+```
+145.239.19.254	example.com
+145.239.19.254	cm1.example.com
+145.239.19.254	idx1.example.com
+145.239.19.254	idx2.example.com
+145.239.19.254	idx3.example.com
+145.239.19.254	idx4.example.com
+145.239.19.254	dep1.example.com
+145.239.19.254	sh1.example.com
+145.239.19.254	sh2.example.com
+145.239.19.254	sh3.example.com
+```
+
+
+*   Edit .env inside splunkdocker_rhel-ubi8
+```
+domain=example.com
+```
 ### Troubleshooting
 * create temp container of the base image and connect to it
     ```
